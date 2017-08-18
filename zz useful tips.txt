@@ -10,7 +10,6 @@ req = request object | res = response object
 //app.listen tells node.js to listen on port 5000
 app.listen(5000);
 
-
 //heroku create app steps - first time deployment
 heroku login
 heroku create
@@ -18,3 +17,13 @@ git remote add heroku {URL}
 git push heroku master
 
 //heroku subsequent deployments
+git push heroku master
+
+//passport gotchas
+- automates most but not all of the OAuth flow
+- additional code setup of passport required
+- inherent confusion over how library is structured
+- includes 2+ different libraries: passport and passport strategy
+- passport library - general helpers for handling auth in Express apps
+- passport strategy - for authenticating with one very specific method eg google, github, twitter
+- for multiple authentication, you need to import multiple passport strategies
