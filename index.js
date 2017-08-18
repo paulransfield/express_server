@@ -25,6 +25,8 @@ app.get(
   })
 );
 
+app.get('/auth/google/callback', passport.authenticate('google'));
+
 //set up dynamic port binding from Heroku process environment variables
 //OR default to 5000 for localhost development environment
 const PORT = process.env.PORT || 5000;
