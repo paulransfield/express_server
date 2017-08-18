@@ -27,3 +27,9 @@ git push heroku master
 - passport library - general helpers for handling auth in Express apps
 - passport strategy - for authenticating with one very specific method eg google, github, twitter
 - for multiple authentication, you need to import multiple passport strategies
+
+//tell passport to use a new GoogleStrategy() constructor
+passport.use(new GoogleStrategy());
+
+//GoogleStrategy requires 2 arguments client ID and app ID
+- console.developers.google.com search for google+ api to locate oauth
