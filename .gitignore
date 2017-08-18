@@ -1,10 +1,6 @@
 *.zip
 *.gz
 config.json
-config_itoi.json
 log/*.log
 log/*.log.[0-9]
-assets
-raw pngs
-assets/pdfs
 node_modules

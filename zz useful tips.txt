@@ -1,2 +1,11 @@
 //to upgrade npm to latest version on windows
-npm install -g npm@next 
+npm install -g npm@next
+
+//different express app route handlers
+app.get | app.post | app.put | app.delete | app.patch
+
+//arguments of app.gets second fat arrow function
+req = request object | res = response object
+
+//app.listen tells node.js to listen on port 5000
+app.listen(5000);

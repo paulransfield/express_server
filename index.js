@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
 
+//express app root route '/' handler
 app.get('/', (req, res) => {
   res.send({ hi: 'there' });
 });
 
-app.listen(5000);
+//set up dynamic port binding from Heroku process environment variables
+//OR default to 5000 for localhost development environment
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
