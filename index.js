@@ -1,15 +1,29 @@
 const express = require('express');
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const keys = require('./config/keys');
+
 const app = express();
 
-//tell passport to use a new GoogleStrategy() constructor
+passport.use(
+  new GoogleStrategy(
+    {
+      clientID: keys.googleClientID,
+      clientSecret: keys.googleClientSecret,
+      callbackURL: '/auth/google/callback'
+    },
+    accessToken => {
+      console.log(accessToken);
+    }
+  )
+);
 
-passport.use(new GoogleStrategy());
-
-app.get('/', (req, res) => {
-  res.send({ hi: 'twitter #gotta.luv #code' });
-});
+app.get(
+  '/auth/google',
+  passport.authenticate('google', {
+    scope: ['profile', 'email']
+  })
+);
 
 //set up dynamic port binding from Heroku process environment variables
 //OR default to 5000 for localhost development environment

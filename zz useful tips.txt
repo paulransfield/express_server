@@ -7,6 +7,11 @@ app.get | app.post | app.put | app.delete | app.patch
 //arguments of app.gets second fat arrow function
 req = request object | res = response object
 
+//basic express route handler
+app.get('/auth/google', (req, res) => {
+  res.send({ hi: 'twitter #gotta.luv #code' });
+});
+
 //app.listen tells node.js to listen on port 5000
 app.listen(5000);
 
@@ -33,3 +38,17 @@ passport.use(new GoogleStrategy());
 
 //GoogleStrategy requires 2 arguments client ID and app ID
 - console.developers.google.com search for google+ api to locate oauth
+
+//configured passport for google, 2 arguments, first includes callbackURL, second includes accessToken callback
+passport.use(
+  new GoogleStrategy(
+    {
+      clientID: keys.googleClientID,
+      clientSecret: keys.googleClientSecret,
+      callbackURL: '/auth/google/callback'
+    },
+    accessToken => {
+      console.log(accessToken);
+    }
+  )
+);
