@@ -3,7 +3,7 @@ const app = express();
 
 //express app root route '/' handler
 app.get('/', (req, res) => {
-  res.send({ hi: 'twitter' });
+  res.send({ hi: 'twitter #gotta.luv #code' });
 });
 
 //set up dynamic port binding from Heroku process environment variables

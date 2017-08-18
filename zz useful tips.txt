@@ -9,3 +9,12 @@ req = request object | res = response object
 
 //app.listen tells node.js to listen on port 5000
 app.listen(5000);
+
+
+//heroku create app steps - first time deployment
+heroku login
+heroku create
+git remote add heroku {URL}
+git push heroku master
+
+//heroku subsequent deployments
