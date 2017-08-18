@@ -1,0 +1,2 @@
+//to upgrade npm to latest version on windows
+npm install -g npm@next 
