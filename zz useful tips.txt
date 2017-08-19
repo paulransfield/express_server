@@ -52,3 +52,13 @@ passport.use(
     }
   )
 );
+
+//when accessToken is returned, we can create user profile in mongodb
+
+//set up dynamic port binding from Heroku process environment variables
+//OR default to 5000 for localhost development environment
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
+
+//why do we care about authentication
+1 - http is stateless: so http can't share state information between different requests
