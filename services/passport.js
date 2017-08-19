@@ -13,12 +13,16 @@ passport.use(
       callbackURL: '/auth/google/callback'
     },
     (accessToken, refreshToken, profile, done) => {
-      User.findOne({ googleid: profile.id });
-      new User({
-        googleid: profile.id,
-        googledisplayName: profile.displayName,
-        googleemails: JSON.stringify(profile.emails)
-      }).save();
+      User.findOne({ googleid: profile.id }).then(existingUser => {
+        if (existingUser) {
+        } else {
+          new User({
+            googleid: profile.id,
+            googledisplayName: profile.displayName,
+            googleemails: JSON.stringify(profile.emails)
+          }).save();
+        }
+      });
     }
   )
 );
