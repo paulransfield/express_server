@@ -29,9 +29,9 @@ passport.use(
           done(null, existingUser);
         } else {
           new User({
-            //            googleid: profile.id,
-            googledisplayName: profile.displayName
-            //            googleemails: JSON.stringify(profile.emails)
+            googleid: profile.id,
+            googledisplayName: profile.displayName,
+            googleemails: JSON.stringify(profile.emails)
           })
             .save()
             .then(user => done(null, user));
