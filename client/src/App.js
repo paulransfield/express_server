@@ -8,9 +8,10 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>#twitter #gotta.luv.react</h2>
+          <h2>#gotta.luv.react</h2>
         </div>
         <p className="App-intro">click to login</p>
+        <a href="/auth/google/">Sign in with Google</a>
       </div>
     );
   }
