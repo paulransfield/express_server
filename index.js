@@ -11,6 +11,7 @@ mongoose.connect(keys.mongodbURI);
 
 const app = express();
 
+//middleware
 app.use(bodyParser.json());
 app.use(
   cookieSession({
@@ -22,6 +23,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+//routes
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
