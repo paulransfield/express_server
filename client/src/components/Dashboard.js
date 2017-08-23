@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Landing = () => {
+const Dashboard = () => {
   return (
     <div style={{ textAlign: 'center' }}>
       <h1>We learn together</h1>
-      <div class="video-container">
+      <div className="video-container">
         <iframe
           title="Paul"
           width="640"
@@ -17,4 +17,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Dashboard;
