@@ -3,7 +3,7 @@ import React from 'react';
 const Landing = () => {
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>We learn together</h1>
+      <h1>Curated together</h1>
       <div class="video-container">
         <iframe
           title="Paul"

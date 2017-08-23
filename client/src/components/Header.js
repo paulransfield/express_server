@@ -38,7 +38,7 @@ class Header extends Component {
             className="left brand-logo"
             style={{ margin: '0 10px' }}
           >
-            WePlay
+            Curated
           </Link>
           <ul id="nav-mobile" className="right">
             {this.renderContent()}
