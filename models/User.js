@@ -8,6 +8,10 @@ const userSchema = new Schema({
   created_at: {
     type: Date,
     default: Date.now
+  },
+  credits: {
+    type: Number,
+    default: 0
   }
 });
 
