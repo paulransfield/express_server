@@ -3,8 +3,7 @@ import React from 'react';
 const Landing = () => {
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Curated together</h1>
-      <div class="video-container">
+      <div className="video-container" style={{ margin: '50px 0' }}>
         <iframe
           title="Paul"
           width="640"
