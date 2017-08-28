@@ -2,8 +2,8 @@ import React from 'react';
 
 const Dashboard = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <div className="video-container" style={{ margin: '50px 0' }}>
+    <div>
+      <div className="video-container z-depth-2" style={{ margin: '50px 0' }}>
         <iframe
           title="Paul"
           width="640"
