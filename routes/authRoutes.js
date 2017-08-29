@@ -15,11 +15,11 @@ module.exports = app => {
       res.redirect('/surveys');
     }
   );
-  /*
+
   app.get(
     '/auth/twitter',
     passport.authenticate('twitter', {
-      scope: ['profile', 'email']
+      scope: ['include_email=true']
     })
   );
 
@@ -27,10 +27,10 @@ module.exports = app => {
     '/auth/twitter/callback',
     passport.authenticate('twitter'),
     (req, res) => {
-      res.redirect('/surveys');
+      res.redirect('http://localhost:3000/surveys');
     }
   );
-*/
+
   app.get('/api/logout', (req, res) => {
     req.logout();
     res.redirect('/');
