@@ -4,5 +4,7 @@ module.exports = {
   mongodbURI: process.env.MONGODB_URI,
   cookieKey: process.env.COOKIE_KEY,
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-  stripeSecretKey: process.env.STRIPE_SECRET_KEY
+  stripeSecretKey: process.env.STRIPE_SECRET_KEY,
+  twitterClientID: process.env.TWITTER_CLIENT_ID,
+  twitterClientSecret: process.env.TWITTER_CLIENT_SECRET
 };
