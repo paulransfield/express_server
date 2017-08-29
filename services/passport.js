@@ -1,5 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+// const TwitterStrategy = require('passport-twitter').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
@@ -39,3 +40,29 @@ passport.use(
     }
   )
 );
+/*
+passport.use(
+  new TwitterStrategy(
+    {
+      clientID: keys.twitterClientID,
+      clientSecret: keys.twitterClientSecret,
+      callbackURL: '/auth/twitter/callback',
+      proxy: true
+    },
+    async (accessToken, refreshToken, profile, done) => {
+      const existingUser = await User.findOne({ twitterid: profile.id });
+      // check if we already have a record with the given profile ID
+      if (existingUser) {
+        return done(null, existingUser);
+      }
+      // otherwise save a new user nb ommitted else
+      const user = await new User({
+        twitterid: profile.id,
+        twitterdisplayName: profile.displayName,
+        twitteremails: JSON.stringify(profile.emails)
+      }).save();
+      done(null, user);
+    }
+  )
+);
+*/
