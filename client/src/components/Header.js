@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import $ from 'jquery';
 import Payments from './Payments';
 
 class Header extends Component {
@@ -11,8 +12,12 @@ class Header extends Component {
       case false:
         return (
           <li>
-            <a href="/auth/google" className="red-text text-darken-3">
-              Login
+            <a
+              className="dropdown-button red-text text-darken-3"
+              href="#!"
+              data-activates="dropdown1"
+            >
+              About us<i className="material-icons right">arrow_drop_down</i>
             </a>
           </li>
         );
@@ -37,22 +42,59 @@ class Header extends Component {
     }
   }
 
+  renderList() {
+    switch (this.props.auth) {
+      case null:
+        return;
+      case false:
+        return (
+          <ul id="dropdown1" className="dropdown-content">
+            <li>
+              <a href="#!" className="red-text text-darken-3">
+                Community
+              </a>
+            </li>
+            <li>
+              <a href="#!" className="red-text text-darken-3">
+                Payments
+              </a>
+            </li>
+            <li className="divider" />
+            <li>
+              <a href="#!" className="red-text text-darken-3">
+                Share
+              </a>
+            </li>
+          </ul>
+        );
+      default:
+        return;
+    }
+  }
+
+  componentDidMount() {
+    $('.dropdown-button').dropdown();
+  }
+
   render() {
     return (
-      <nav>
-        <div className="navbar-fixed nav-wrapper light-blue lighten-3">
-          <Link
-            to={this.props.auth ? '/surveys' : '/'}
-            className="left brand-logo"
-            style={{ margin: '0 10px' }}
-          >
-            Curated
-          </Link>
-          <ul id="nav-mobile" className="right">
-            {this.renderContent()}
-          </ul>
-        </div>
-      </nav>
+      <div>
+        {this.renderList()}
+        <nav>
+          <div className="navbar-fixed nav-wrapper light-blue lighten-3">
+            <Link
+              to={this.props.auth ? '/surveys' : '/'}
+              className="left brand-logo"
+              style={{ margin: '0 10px' }}
+            >
+              Curated
+            </Link>
+            <ul className="right">
+              {this.renderContent()}
+            </ul>
+          </div>
+        </nav>
+      </div>
     );
   }
 }
