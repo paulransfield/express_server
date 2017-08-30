@@ -3,7 +3,7 @@ import React from 'react';
 const Landing = () => {
   return (
     <div>
-      <div className="row">
+      <div className="row" style={{ margin: '15px 0' }}>
         <div className="col s4">
           <div className="card">
             <div className="card-image">
