@@ -12,20 +12,48 @@ class Footer extends Component {
           <footer>
             <div className="fixed-action-btn toolbar renderOpen">
               <a className="btn-floating btn-large light-blue lighten-3">
-                <i className="large material-icons">vpn_key</i>Login
+                <i className="fa fa-sign-in" aria-hidden="true" />Login
               </a>
               <ul>
                 <li className="waves-effect waves-light">
-                  <a href="/auth/google">Google</a>
+                  <a href="/auth/google">
+                    <i
+                      className="fa fa-google fa-fw"
+                      aria-hidden="true"
+                    />Google
+                  </a>
                 </li>
                 <li className="waves-effect waves-light">
-                  <a href="/auth/twitter">Twitter</a>
+                  <a href="/auth/twitter">
+                    <i
+                      className="fa fa-twitter fa-fw"
+                      aria-hidden="true"
+                    />Twitter
+                  </a>
                 </li>
                 <li className="waves-effect waves-light">
-                  <a href="#!">Facebook</a>
+                  <a href="#!">
+                    <i
+                      className="fa fa-facebook fa-fw"
+                      aria-hidden="true"
+                    />Facebook
+                  </a>
                 </li>
                 <li className="waves-effect waves-light">
-                  <a href="#!">Github</a>
+                  <a href="#!">
+                    <i
+                      className="fa fa-github fa-fw"
+                      aria-hidden="true"
+                    />Github
+                  </a>
+                </li>
+                <li className="waves-effect waves-light">
+                  <a href="#!">
+                    <i
+                      className="fa fa-id-card fa-fw"
+                      aria-hidden="true"
+                    />RealMe
+                  </a>
                 </li>
               </ul>
             </div>

@@ -29,7 +29,7 @@ const Landing = () => {
               />
               <span className="card-title">Sports</span>
               <a className="btn-floating halfway-fab waves-effect waves-light red">
-                <i className="material-icons">add</i>
+                <i className="fa fa-key" aria-hidden="true" />
               </a>
             </div>
           </div>
