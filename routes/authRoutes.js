@@ -22,12 +22,12 @@ module.exports = app => {
       scope: ['include_email=true']
     })
   );
-
+  //temporary hard code localhost:3000 as redirect
   app.get(
     '/auth/twitter/callback',
     passport.authenticate('twitter'),
     (req, res) => {
-      res.redirect('/surveys');
+      res.redirect('http://localhost:3000/surveys');
     }
   );
 
