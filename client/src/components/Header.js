@@ -72,7 +72,7 @@ class Header extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     $('.dropdown-button').dropdown();
   }
 
