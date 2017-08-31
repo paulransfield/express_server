@@ -7,7 +7,7 @@ module.exports = {
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
   twitterClientID: process.env.TWITTER_CLIENT_ID,
   twitterClientSecret: process.env.TWITTER_CLIENT_SECRET,
-  sendGridKey: process.env.SEND_GRID_KEY
+  sendGridKey: process.env.SEND_GRID_KEY,
   facebookClientID: process.env.FACEBOOK_CLIENT_ID,
   facebookClientSecret: process.env.FACEBOOK_CLIENT_SECRET
 };
