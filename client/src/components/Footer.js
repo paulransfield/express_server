@@ -32,7 +32,7 @@ class Footer extends Component {
                   </a>
                 </li>
                 <li className="waves-effect waves-light">
-                  <a href="#!">
+                  <a href="/auth/facebook">
                     <i
                       className="fa fa-facebook fa-fw"
                       aria-hidden="true"
