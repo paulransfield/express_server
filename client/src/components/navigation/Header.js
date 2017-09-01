@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import $ from 'jquery';
-import Payments from './Payments';
+import Payments from '../services/Payments';
 
 class Header extends Component {
   renderContent() {
