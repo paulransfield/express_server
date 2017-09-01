@@ -3,9 +3,9 @@ import React from 'react';
 const Landing = () => {
   return (
     <div>
-      <div className="row" style={{ margin: '15px 0' }}>
+      <div className="row">
         <div className="col s4">
-          <div className="card">
+          <div className="card" style={{ margin: '15px 0 0 0' }}>
             <div className="card-image">
               <img
                 src="http://lorempixel.com/output/city-q-c-350-350-5.jpg"
@@ -20,7 +20,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="col s4">
-          <div className="card">
+          <div className="card" style={{ margin: '15px 0 0 0' }}>
             <div className="card-image">
               <img
                 src="http://lorempixel.com/output/sports-q-c-350-350-5.jpg"
@@ -38,7 +38,7 @@ const Landing = () => {
           </div>
         </div>
         <div className="col s4">
-          <div className="card">
+          <div className="card" style={{ margin: '15px 0 0 0' }}>
             <div className="card-image">
               <img
                 src="http://lorempixel.com/output/nature-q-c-350-350-5.jpg"
