@@ -76,7 +76,7 @@ passport.use(
       clientID: keys.facebookClientID,
       clientSecret: keys.facebookClientSecret,
       callbackURL: '/auth/facebook/callback',
-      passReqToCallback: true,
+      profileFields: ['id', 'name'],
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
@@ -89,8 +89,7 @@ passport.use(
       const user = await new User({
         appid: profile.id,
         apptype: 'facebook',
-        appdisplayName: profile.name.givenName + ' ' + profile.name.familyName,
-        appemails: profile.emails[0].value
+        appdisplayName: profile.name.givenName + ' ' + profile.name.familyName
       }).save();
       done(null, user);
     }

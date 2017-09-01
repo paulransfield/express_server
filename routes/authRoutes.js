@@ -34,13 +34,13 @@ module.exports = app => {
   app.get(
     '/auth/facebook',
     passport.authenticate('facebook', {
-      scope: ['profile', 'email']
+      scope: ['email']
     })
   );
 
   app.get(
     '/auth/facebook/callback',
-    passport.authenticate('facebook'),
+    passport.authenticate('facebook', { failureRedirect: '/' }),
     (req, res) => {
       res.redirect('/surveys');
     }
